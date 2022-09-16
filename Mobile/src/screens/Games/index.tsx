@@ -30,7 +30,7 @@ export function Game() {
   }
 
   async function getDiscordUser(adsId: string) {
-    const response = await fetch(`http://192.168.1.2:3333/ads/${adsId}/discord`).then(response => response.json());
+    const response = await fetch(`http://ipdasuamaquina/ads/${adsId}/discord`).then(response => response.json());
 
     setDiscordDuoSelected(response.discord);
   } 
@@ -38,7 +38,7 @@ export function Game() {
   useEffect(() => {
     if (duos.length === 0) {
       (async function getGamesApi() {
-        const response = await fetch(`http://192.168.1.2:3333/games/${game.id}/ads`).then(response => response.json());
+        const response = await fetch(`http://ipdasuamaquina/games/${game.id}/ads`).then(response => response.json());
 
         setDuos(response);
       })()

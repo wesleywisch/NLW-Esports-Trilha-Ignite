@@ -23,7 +23,7 @@ export function Home() {
   useEffect(() => {
     if (games.length === 0) {
       (async function getGamesApi() {
-        const response = await fetch(`http://192.168.1.2:3333/games`).then(response => response.json());
+        const response = await fetch(`http://ipdasuamaquina/games`).then(response => response.json());
 
         setGames(response);
       })()
