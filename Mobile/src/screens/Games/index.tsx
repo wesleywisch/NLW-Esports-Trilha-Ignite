@@ -33,7 +33,7 @@ export function Game() {
     const response = await fetch(`http://ipdasuamaquina/ads/${adsId}/discord`).then(response => response.json());
 
     setDiscordDuoSelected(response.discord);
-  } 
+  }
 
   useEffect(() => {
     if (duos.length === 0) {
@@ -89,7 +89,7 @@ export function Game() {
           )}
         />
 
-        <DuoMatch 
+        <DuoMatch
           visible={discordDuoSelected.length > 0}
           discord={discordDuoSelected}
           onClose={() => setDiscordDuoSelected('')}
